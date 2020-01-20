@@ -71,8 +71,8 @@ A good template for writing tests with Jest would look something like this:
 
 ```js
 // Answer these questions for each unit test you write:
-describe('What component aspect are you testing?', () => {
-	test('What should the feature do?', () => {
+describe('What component aspect are you testing?', function() {
+	test('What should the feature do?', function() {
 		const actual = 'What is the actual output?';
 		const expected = 'What is the expected output?';
 		expect(actual).toBe(expected);
