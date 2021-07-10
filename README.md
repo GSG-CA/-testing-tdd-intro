@@ -13,13 +13,13 @@ It's very easy to create bugs in code, especially when you're editing an existin
 Here's a slightly contrived example:
 
 ```js
-function double(num) {
+const double = (num) => {
 	return num * 2;
 }
 
-function testDouble() {
-	var actual = double(2);
-	var expected = 4;
+const testDouble = () => {
+	const actual = double(2);
+	const expected = 4;
 	if (actual !== expected) {
 		console.log(actual + ' should equal ' + expected + '╳');
 	} else {
@@ -71,8 +71,8 @@ A good template for writing tests with Jest would look something like this:
 
 ```js
 // Answer these questions for each unit test you write:
-describe('What component aspect are you testing?', function() {
-	test('What should the feature do?', function() {
+describe('What component aspect are you testing?', () => {
+	test('What should the feature do?', () => {
 		const actual = 'What is the actual output?';
 		const expected = 'What is the expected output?';
 		expect(actual).toBe(expected);
